@@ -1,0 +1,80 @@
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #37373F;
+    height: 15vh;
+    width: 100vw;
+    align-items: center;
+}
+
+
+.div_logo{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.h1logo{
+    z-index: 1;
+    color: aliceblue;
+    font-size: 3em;
+    
+
+    
+  }
+
+/* estilo de el logo */
+
+.App-logo {
+   
+    width: 8vw;
+ }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+
+
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  /* estilo de el input */
+
+  .navbar_input{
+    margin-left: 5%;
+    width: 30vw;
+    height: 30%;
+    border-radius: 13px;
+    font-size: 1.5em;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+
+
+  /* iniciar sesion style */
+  .navbar_link{
+    color: aliceblue;
+    margin-right: 5%;
+  }
+
+  .div_login{
+    display: flex;
+    flex-direction: row;
+    width: 10vw;
+
+  }
