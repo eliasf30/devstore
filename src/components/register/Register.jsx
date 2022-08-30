@@ -15,7 +15,7 @@ export default function Home() {
                 <img style={{width:"25px", margin:"10%"}} classname="googleimage" src={googleimage}/>
                 <p>Google</p>
             </button>
-            <Link style={{color: "#91C612", fontWeight:"600"}} to="">¿Ya tenes cuenta? inicia sesión</Link>
+            <NavLink style={{color: "#91C612", fontWeight:"600"}} to="/login" >¿Ya tenes cuenta? inicia sesión</NavLink>
             <button className='register_button'>Registrarse</button>
         </div>
     )

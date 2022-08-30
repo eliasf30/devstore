@@ -64,6 +64,23 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
   }
+  .input_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  .div_button{
+    background-color: white;
+    border-radius: 20%;
+    margin: 3%;
+    width: 40px;
+    height: 35px;
+  
+
+
+  }
 
 
   /* iniciar sesion style */
@@ -78,3 +95,64 @@
     width: 10vw;
 
   }
+
+  .cart_div{
+    background-color: #2B2B2C;
+    width: 30vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    position: fixed;
+    
+
+  }
+
+  .product_title_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .products_div{
+    
+    width: 100%;
+    height: 60%;
+
+  }
+
+  .total_div{
+    border-top: 1px solid #BEBEBE ;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cart_button{
+    border-radius: 5px;
+    width: 30%;
+    height: 120%;
+    
+   
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2%;
+    color: aliceblue;
+    font-size: 1.2em;
+    
+    background-image: linear-gradient(
+        45deg,
+        hsl(100deg 80% 78%) 0%,
+        hsl(95deg 72% 72%) 10%,
+        hsl(91deg 67% 66%) 20%,
+        hsl(87deg 63% 59%) 30%,
+        hsl(83deg 61% 52%) 40%,
+        hsl(78deg 83% 42%) 50%,
+        hsl(82deg 83% 38%) 60%,
+        hsl(88deg 83% 35%) 70%,
+        hsl(94deg 83% 31%) 80%,
+        hsl(103deg 84% 27%) 90%,
+        hsl(118deg 86% 23%) 100%)
+  }
+
