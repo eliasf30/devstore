@@ -37,7 +37,7 @@ export default function CardCategories({ img, title, category}){
         
         <Box>
             <NavLink className="card_navlink" to={category}>
-            <h3 style={{color:"black"}}>{title}</h3>
+            <h3 style={{color:"black",fontWeight:"400"}}>{title}</h3>
             <img  alt={title} src={img}/>
             </NavLink>
         </Box>
