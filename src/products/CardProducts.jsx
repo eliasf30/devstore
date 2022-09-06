@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import "./cardproduct.css"
+import { useDispatch } from "react-redux";
+import { addProduct } from '../redux/cart-actions';
 
 const Box = styled.div`
 width: 40%;
@@ -30,13 +32,15 @@ display: flex;
 
 export default function CardProduct({ id, image, title, price }) {
 
+    const dispatch = useDispatch();
+
     return (
         <Box>
             <div style={{ display: "flex", flexDirection: "row" }}>
                 <img style={{ width: "30%", margin: "3%" }} alt={title} src={image} />
                 <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", width:"100%" }}>
                     <h4 className="product_price">{`$${price}`}</h4>
-                    <button className="card_button">Agregar al carrito!</button>
+                    <button  onClick={e => dispatch(addProduct({ title, image,  price, id }))} className="card_button">Agregar al carrito!</button>
                 </div>
             </div>
             <h3 className="product_title">{title}</h3>

@@ -1,19 +1,27 @@
 import logo from '../logo.svg';
 import './navbar.css';
-import { Route, Routes, Navigate, Link, NavLink } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 import { FaShoppingCart, FaUser, FaTrash, FaWindowClose, FaSearch } from 'react-icons/fa';
 import { useState } from 'react';
+import CardCarrito from "./cardCarrito/cardcarrito.jsx"
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCart } from '../redux/cart-actions';
+
+
 
 export default function Navbar() {
 
 
     const [showCart, setShowCart] = useState({ visibility: "hidden" })
 
-    const Total = 3000
+    
 
+    const { items, totalcost } = useSelector(state => state.cart);
+    
+    
+      
 
-
-
+    const dispatch = useDispatch()
 
     return (
         <div className="navbar">
@@ -42,15 +50,25 @@ export default function Navbar() {
                 </button>
                 <div className='product_title_div'>
                     <h2 style={{ margin: "5%", color: "#BEBEBE" }}>Tus Productos</h2>
-                    <FaTrash style={{ margin: "5%", fontSize: "1.5em", color: "#BEBEBE", }} />
+                    
+                    <FaTrash onClick={e => dispatch(deleteCart)}  style={{ margin: "5%", fontSize: "1.5em", color: "#BEBEBE", cursor:"pointer" }} />
+                    
                 </div>
-                <div className='products_div'></div>
+                <div className='products_div'>
+
+                {items.length ? (
+                  items.map(item => <CardCarrito key={item.id} {...item} />)
+                ) : (
+                  <h3 className='noProductH3'>Aca van tus productos...</h3>
+                )}
+                
+                </div>
                 <div className='total_div'>
                     <h3 style={{ margin: "5%", fontSize: "1.8em", color: "#BEBEBE" }}>Total:</h3>
-                    <h3 style={{ margin: "5%", fontSize: "1.8em", color: "#BEBEBE" }}>{Total}</h3>
+                    <h3 style={{ margin: "5%", fontSize: "1.8em", color: "#BEBEBE" }}>${totalcost}</h3>
                 </div>
                 <div style={{ display: 'flex', justifyContent: "center" }}>
-                    <button className='cart_button'>Iniciar Pedido</button>
+                    <button disabled={!items.length} className='cart_button'>Iniciar Pedido</button>
                 </div>
 
 
