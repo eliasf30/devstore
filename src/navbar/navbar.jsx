@@ -1,27 +1,33 @@
 import logo from '../logo.svg';
 import './navbar.css';
-import {  NavLink } from "react-router-dom"
+import {  Navigate, NavLink } from "react-router-dom"
 import { FaShoppingCart, FaUser, FaTrash, FaWindowClose, FaSearch } from 'react-icons/fa';
 import { useState } from 'react';
 import CardCarrito from "./cardCarrito/cardcarrito.jsx"
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart } from '../redux/cart-actions';
-
+import { Categories } from "../categories/categories"
+import { useRef } from 'react';
 
 
 export default function Navbar() {
 
 
     const [showCart, setShowCart] = useState({ visibility: "hidden" })
-
+    const [search, setSearch] = useState("")
     
 
     const { items, totalcost } = useSelector(state => state.cart);
     
+    const inputValue = useRef()
     
-      
+
+
 
     const dispatch = useDispatch()
+
+
+  
 
     return (
         <div className="navbar">
@@ -32,10 +38,15 @@ export default function Navbar() {
                 </NavLink>
             </div>
             <div className='input_div'>
-                <input className='navbar_input' type="text" placeholder='¿Que estas buscando?'></input>
-                <button className='div_button'>
+                <input ref={inputValue} onInput={() => setSearch("home/" + inputValue.current.value)} list="categories" className='navbar_input' type="text" placeholder='¿Que estas buscando?'></input>
+                <datalist id='categories' className='datalist' >
+                {
+                    Categories.map(category => <option className='option' key={category.id} value={category.title}></option>)
+                }
+                </datalist>
+                <NavLink to={search} className='div_button'>
                     <FaSearch />
-                </button>
+                </NavLink>
             </div>
             <button onClick={() => { setShowCart({ visibility: "visible" }) }} style={{ backgroundColor: "#37373F", border: "none" }}>
                 <FaShoppingCart style={{ color: 'aliceblue', fontSize: '35px', marginLeft: "20%" }} />

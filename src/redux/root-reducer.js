@@ -14,7 +14,7 @@ export default persistReducer(
   {
     key: 'global',
     storage,
-    whitelist: [],
+    blacklist: [],
   },
   rootReducer
 );
