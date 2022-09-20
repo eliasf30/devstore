@@ -15,7 +15,7 @@ const LoginInput = ({ name, type, placeholder }) => {
             {({ field, form: { errors } }) => (
 
               <div className="inputdiv">
-                <input className='registerinput' type={type} placeholder={placeholder} {...field} isError={errors[Field.name]} ></input>
+                <input className='registerinput' type={type} placeholder={placeholder} {...field}  ></input>
                     <ErrorMessage name={field.name}>
                         {message => <ErrorMessageStyled>{message}</ErrorMessageStyled>}
                     </ErrorMessage>
