@@ -9,7 +9,7 @@ import { deleteCart } from '../redux/cart-actions';
 import { Categories } from "../categories/categories"
 import { useRef } from 'react';
 import { auth } from '../firebase/firebase-utils';
-import Login from '../components/login/login';
+
 
 
 export default function Navbar() {
