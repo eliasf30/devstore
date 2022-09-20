@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes, Navigate, Link, NavLink } from "react-router-dom"
 import Home from './components/Home/Home.jsx';
 import Register from './components/register/Register.jsx'
-import Login from './components/login/Login';
+import Login from './components/Login/Login';
 import Forgotpassword from './components/Forgot-password/forgot-password';
 import Foooter from './Footer/Footer';
 import Procesador from './categories/categorias/procesador';
