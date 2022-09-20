@@ -17,7 +17,7 @@ export default function CardCarrito({title,id,image,price,quantity}) {
             <img style={{ width: "20%" }} src={image} />
             <h3 style={{ color: "#000000",width:"50%" }}>{title}</h3>
             <div style={{display:"flex",flexDirection:"column", marginLeft:"10%"}}>
-                <h4 style={{ color: "#000000", fontSize:"1.2em",marginBottom:"10%", marginTop:"15%"  }}>{`$${price * quantity}`}</h4>
+                <h4 style={{ color: "#000000", fontSize:"1.2em",marginBottom:"0", marginTop:"15%"  }}>{`$${price * quantity}`}</h4>
                 <div style={{display:"flex",flexDirection:"row", alignItems:"center" }}>
                     <button onClick={() => dispatch(removeProduct(id))} className="productButton">< FaMinus/></button>
                     <h4 style={{color:"#000000", fontSize:"1.2em"}}>{quantity}</h4>

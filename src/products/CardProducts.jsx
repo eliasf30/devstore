@@ -5,7 +5,7 @@ import { addProduct } from '../redux/cart-actions';
 
 const Box = styled.div`
 width: 40%;
-height: 40%;
+height: 42%;
 font-size: .9em;
 text-decoration: none;
 background-color: white;
@@ -19,7 +19,7 @@ display: flex;
 &:hover{
     cursor: pointer;
     width: 42%;
-    height: 42%;
+    height: 44%;
     transition:.5s;
 }
 

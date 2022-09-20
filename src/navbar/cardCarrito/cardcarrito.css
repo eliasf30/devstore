@@ -12,10 +12,10 @@
 .productButton{
     border-radius: 8px;
    
-    height: 60%;
+    height: 45%;
     margin: 5%;
     
-   
+    border: 1px solid black;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     

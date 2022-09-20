@@ -50,7 +50,7 @@ export default function Register() {
                     <LoginInput name="email" type="text" placeholder='Email'></LoginInput>
                     <LoginInput name="password" type="password" placeholder='Password'></LoginInput>
                     <h3>O podes ingresar con</h3>
-                    <button className='button' onClick={e => {
+                    <button className='buttonGoogle' onClick={e => {
                         const response = signInGoogle();
                         console.log({response})
                     }}>

@@ -40,7 +40,7 @@
     margin-top: 2%;
     color: aliceblue;
     font-size: 1.2em;
-    
+    border: 1px solid black;
     background-image: linear-gradient(
         45deg,
         hsl(100deg 80% 78%) 0%,

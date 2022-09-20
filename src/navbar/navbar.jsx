@@ -79,8 +79,8 @@ export default function Navbar() {
                 <button onClick={() => { setShowModal({ visibility: "hidden" }) }} style={{ margin: "5%", marginTop: "8%", backgroundColor: "#2B2B2C", border: "none" }}>
                     <FaWindowClose style={{ fontSize: "2em", color: "#BEBEBE", position:'absolute', left:"0", top:"0", margin:"4%", marginBottom:"1%" }} />
                 </button>
-                <div style={{ width: "100%", borderBottom: "2px solid #E2E2E2", display: "flex", justifyContent: "center", margin: "5%", marginTop:"0" }}>
-                    <h3>Bienvenido {user?.name}!</h3>
+                <div style={{ width: "100%", borderBottom: "1px solid #E2E2E2", display: "flex", justifyContent: "center", margin: "5%", marginTop:"0" }}>
+                    <h3 style={{fontWeight:"100"}}>Bienvenido {user?.name}!</h3>
                 </div>
                 
                 <button onClick={() =>  auth.signOut().then(() => { setShowModal({ visibility: "hidden" }) }) }  className="modal_button"> Cerrar sesion</button>
