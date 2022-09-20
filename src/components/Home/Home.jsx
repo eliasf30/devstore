@@ -6,7 +6,7 @@ import { Categories } from "../../categories/categories";
 export default function Home() {
     return (
         <div className="home">
-            <h2>categorias</h2>
+            <h2>Categorias</h2>
             <div className="categories">
 
                 {

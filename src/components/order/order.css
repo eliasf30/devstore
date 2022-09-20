@@ -1,0 +1,18 @@
+
+.order_div{
+    display: flex;
+    flex-direction: column;
+    background-color:#f1f1f1;
+    align-items: center;
+    margin: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 85vh;
+}
+
+.order_products_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}

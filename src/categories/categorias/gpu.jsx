@@ -9,7 +9,7 @@ export default function Gpu(){
 
     return(
         <div className="categoria">
-            <h2>Gpu</h2>
+            <h2>Placas De Video</h2>
             <div className="product_containter">
             {
                 productsfiltred.map(product => <CardProduct key={product.id} {...product}/>)

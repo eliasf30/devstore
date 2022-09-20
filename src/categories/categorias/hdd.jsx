@@ -9,7 +9,7 @@ export default function HDD(){
 
     return(
         <div className="categoria">
-            <h2>Hdd</h2>
+            <h2>Disco duro</h2>
             <div className="product_containter">
             {
                 productsfiltred.map(product => <CardProduct key={product.id} {...product}/>)

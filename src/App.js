@@ -16,7 +16,51 @@ import Ram from './categories/categorias/ram'
 import Monitor from './categories/categorias/monitor'
 
 
+
+import { onAuthStateChanged } from 'firebase/auth';
+import { onSnapshot } from 'firebase/firestore';
+import { useEffect } from 'react';
+import {
+  auth,
+  getFirebaseOrders,
+  getOrCreateUserProfile,
+} from './firebase/firebase-utils';
+import { useDispatch } from 'react-redux';
+import { SetCurrentUser } from './redux/user/user-actions';
+import Order from './components/order/order';
+
+const onAuthChange = (dispatch, action) => {
+  return onAuthStateChanged(auth, async user => {
+    if (user){
+      const {ref} = await getOrCreateUserProfile(user)
+      
+      onSnapshot(ref, snapshot => {
+
+        const userData = snapshot.data();
+
+        dispatch(action({id:snapshot.id, ...userData}))
+
+      });
+    
+    }else{
+      dispatch(action(null))
+
+
+    }
+    
+  })
+
+};
+
 function App() {
+  
+  const dispatch = useDispatch();
+    
+  useEffect(() => {
+    const unsuscribre = onAuthChange(dispatch, SetCurrentUser)
+    return () => unsuscribre();
+    
+  },[dispatch]);
 
   function NotFound() {
     return (
@@ -54,6 +98,7 @@ function App() {
         <Route path='/home/memoria%20ram' element={<Navigate to="/home/Ram" />} />
         <Route path='/home/disco%20duro' element={<Navigate to="/home/Hdd" />} />
         <Route path='/home/motherboard' element={<Navigate to="/home/mother" />} />
+        <Route path="/order" element={<Order/>}/>
 
       </Routes>
 

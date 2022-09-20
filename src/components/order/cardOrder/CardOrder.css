@@ -1,0 +1,9 @@
+.cardOrder{
+    background-color: #FFFFFF;
+    
+    width: 60%;
+    
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}

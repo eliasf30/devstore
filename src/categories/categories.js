@@ -13,49 +13,49 @@ export const Categories = [
     {
         id: 1,
         img: procesador,
-        title: "procesador",
+        title: "Procesador",
         category: "procesador",
     },
     {
         id: 2,
         img: motherboard,
-        title: "motherboard",
+        title: "Motherboard",
         category: "mother",
     },
     {
         id: 3,
         img: ram,
-        title: "memoria ram",
+        title: "Memoria ram",
         category: "ram",
     },
     {
         id: 4,
         img: hdd,
-        title: "disco duro",
+        title: "Disco duro",
         category: "Hdd",
     },
     {
         id: 5,
         img: gpu,
-        title: "placa de video",
+        title: "Placa de video",
         category: "Gpu",
     },
     {
         id: 6,
         img: fuente,
-        title: "fuente",
+        title: "Fuente",
         category: "fuente",
     },
     {
         id: 7,
         img: gabinete,
-        title: "gabinete",
+        title: "Gabinete",
         category: "gabinete",
     },
     {
         id: 8,
         img: monitor,
-        title: "monitor",
+        title: "Monitor",
         category: "monitor",
     }
 
